@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const telegramClint = require('./telegram_client')
+const telegramClint = require('../clients/telegram_client')
 
-const { TOKEN } = process.env
-const URI = `/${TOKEN}`
+const { TELEGRAM_TOKEN } = process.env
+const URI = `/${TELEGRAM_TOKEN}`
 
 router.post(URI, async (req, res) => {
   console.log(req.body)

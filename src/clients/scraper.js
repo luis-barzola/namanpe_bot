@@ -16,12 +16,11 @@ const screenshot = async (url) => {
   )
 }
 
-const checkElement = async (url) => {
+const checkElement = async (url, finder) => {
   await bowser(
     async (page) => {
       await page.goto(url)
-      const value = await page.locator('.js-prod-submit-form').inputValue()
-      return value !== 'Sin stock'
+      return await finder(page)
     }
   )
 }

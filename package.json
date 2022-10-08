@@ -2,17 +2,18 @@
   "name": "namanpe_bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node src/index.js",
+    "dev": "node_modules/.bin/nodemon ./src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.1.2",
     "body-parser": "^1.20.1",
+    "cron": "^2.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "playwright": "^1.26.1"

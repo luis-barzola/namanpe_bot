@@ -1,6 +1,6 @@
-const { TOKEN, SERVER_URL } = process.env
-const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`
-const URI = `/webhook/${TOKEN}`
+const { TELEGRAM_TOKEN, SERVER_URL } = process.env
+const TELEGRAM_API = `https://api.telegram.org/bot${TELEGRAM_TOKEN}`
+const URI = `/webhook/${TELEGRAM_TOKEN}`
 const WEBHOOK_URL = SERVER_URL + URI
 const axios = require('axios')
 
