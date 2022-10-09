@@ -19,7 +19,7 @@ const checkStock = async () => {
     const { url, vendor, checkStock } = shop
     const hasStock = await scraper.checkElement(url, checkStock)
 
-    if (!hasStock) {
+    if (hasStock) {
       await telegram.sendMessage(CHAT_ID, `🚀 ${vendor} tiene stock 🚀 \n ${url}`)
     }
   }
